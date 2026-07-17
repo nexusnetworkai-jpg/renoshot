@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>RenoShot — AI Renovation Previews That Help Contractors Win the Bid</title>
+<meta name="description" content="Send us one photo of a room or exterior. We turn it into a photorealistic AI renovation preview in 24–48h so your client can SEE the finished result before they sign. $99 per render. Money-back guarantee."/>
+<style>
+  :root{--ink:#141b24;--mut:#5b6b7a;--line:#e6ebf0;--brand:#1f7a5a;--brand2:#12b886;--bg:#f7f9fb;--card:#fff;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+  .pill{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--brand);background:#e7f6ef;border:1px solid #cdeee0;padding:6px 12px;border-radius:999px}
+  header{padding:56px 0 30px;text-align:center;background:linear-gradient(180deg,#fff, var(--bg))}
+  h1{font-size:44px;line-height:1.1;letter-spacing:-.02em;margin:16px 0 12px}
+  h1 span{color:var(--brand)}
+  .sub{font-size:19px;color:var(--mut);max-width:720px;margin:0 auto 24px}
+  .cta{display:inline-block;background:var(--brand);color:#fff;font-weight:700;font-size:17px;padding:15px 30px;border-radius:12px;text-decoration:none;box-shadow:0 8px 22px rgba(31,122,90,.22)}
+  .cta.alt{background:#fff;color:var(--brand);border:2px solid var(--brand);box-shadow:none;margin-left:10px}
+  .trust{margin-top:14px;font-size:13px;color:var(--mut)}
+  section{padding:44px 0}
+  h2{font-size:30px;letter-spacing:-.01em;text-align:center;margin-bottom:8px}
+  .lead{text-align:center;color:var(--mut);max-width:680px;margin:0 auto 30px;font-size:17px}
+  .ba{display:grid;grid-template-columns:1fr;gap:26px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 2px 14px rgba(20,27,36,.04)}
+  .card h3{font-size:17px;padding:16px 20px 4px}
+  .card .note{padding:0 20px 16px;color:var(--mut);font-size:14px}
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line)}
+  .pair figure{position:relative;margin:0;background:#000}
+  .pair img{width:100%;height:300px;object-fit:cover;display:block}
+  .tag{position:absolute;top:12px;left:12px;font-size:11px;font-weight:800;letter-spacing:.08em;color:#fff;background:rgba(20,27,36,.72);padding:5px 10px;border-radius:6px}
+  .tag.after{background:rgba(31,122,90,.92)}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .step .n{width:34px;height:34px;border-radius:9px;background:#e7f6ef;color:var(--brand);font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+  .step h4{font-size:17px;margin-bottom:5px}
+  .step p{color:var(--mut);font-size:14.5px}
+  .price{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px;margin:0 auto}
+  .tier{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;text-align:center;position:relative}
+  .tier.best{border:2px solid var(--brand)}
+  .tier .badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--brand);color:#fff;font-size:11px;font-weight:800;letter-spacing:.06em;padding:5px 12px;border-radius:999px}
+  .tier .amt{font-size:40px;font-weight:800;letter-spacing:-.02em;margin:6px 0 2px}
+  .tier .amt small{font-size:15px;font-weight:600;color:var(--mut)}
+  .tier ul{list-style:none;text-align:left;margin:18px 0 22px;font-size:14.5px}
+  .tier li{padding:6px 0 6px 26px;position:relative;color:#33424f}
+  .tier li:before{content:"✓";position:absolute;left:0;color:var(--brand);font-weight:800}
+  .guarantee{max-width:760px;margin:26px auto 0;background:#e7f6ef;border:1px solid #cdeee0;border-radius:14px;padding:20px 24px;text-align:center;color:#22503f;font-size:15.5px}
+  .guarantee b{color:var(--brand)}
+  .faq{max-width:760px;margin:0 auto}
+  .faq .q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:12px}
+  .faq .q b{display:block;margin-bottom:4px}
+  .faq .q p{color:var(--mut);font-size:14.5px}
+  footer{padding:40px 0 60px;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--line);margin-top:20px}
+  .aiband{background:#141b24;color:#cfe9df;text-align:center;font-size:13.5px;padding:11px 18px}
+  .aiband b{color:#fff}
+  @media(max-width:720px){.steps,.price,.pair{grid-template-columns:1fr}h1{font-size:33px}.pair img{height:240px}}
+</style>
+</head>
+<body>
+
+<div class="aiband">🤖 <b>RenoShot is an AI service, run by Orion.</b> Every preview is AI-generated from your own photo — no cameras, no site visits, no waiting weeks.</div>
+
+<header>
+  <div class="wrap">
+    <span class="pill">For remodelers · kitchen &amp; bath · painters · landscapers</span>
+    <h1>Let clients <span>see the finished remodel</span><br/>before they sign the contract.</h1>
+    <p class="sub">Send us <b>one photo</b> of the room or exterior. In <b>24–48 hours</b> you get a photorealistic AI renovation preview of that <b>exact space</b> — the visual that closes the bid. Your <b>first sample is free</b>; paid renders are just <b>$99</b>.</p>
+    <a class="cta" href="#start">Get my free sample render →</a>
+    <div class="trust">No subscription · Your photo, your space · <a href="#pricing" style="color:var(--mut)">see pricing</a> · 14-day money-back guarantee</div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Real before → after previews</h2>
+    <p class="lead">Same room, same angle, same layout — only the finishes change. These samples were generated from public photos to show the quality. Yours are made from the photo you send.</p>
+    <div class="ba">
+      <div class="card">
+        <h3>Kitchen remodel preview</h3>
+        <div class="pair">
+          <figure><span class="tag">BEFORE</span><img src="https://nexusnetworkai-jpg.github.io/renoshot/kitchen_before.jpg" alt="Dated kitchen before renovation"/></figure>
+          <figure><span class="tag after">AFTER · AI</span><img src="https://nexusnetworkai-jpg.github.io/renoshot/kitchen_after.jpg" alt="Modern kitchen renovation preview"/></figure>
+        </div>
+        <p class="note">Dated backsplash &amp; cabinets → clean white shaker cabinets, quartz counters, subway tile. The window and adjoining room stay exactly where they are.</p>
+      </div>
+      <div class="card">
+        <h3>Bathroom remodel preview</h3>
+        <div class="pair">
+          <figure><span class="tag">BEFORE</span><img src="https://nexusnetworkai-jpg.github.io/renoshot/bath_before.jpg" alt="Dark dated bathroom before renovation"/></figure>
+          <figure><span class="tag after">AFTER · AI</span><img src="https://nexusnetworkai-jpg.github.io/renoshot/bath_after.jpg" alt="Bright modern bathroom renovation preview"/></figure>
+        </div>
+        <p class="note">Dark walls &amp; old vanity → bright spa look, floating wood vanity, matte-black fixtures. Mirror, sconces and the framed art keep their exact positions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="lead">Built for the bidding conversation. You do nothing but forward a photo.</p>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h4>Send one photo</h4><p>Email us a normal phone photo of the room or exterior, plus a line on the look you're pitching (e.g. "modern white kitchen").</p></div>
+      <div class="step"><div class="n">2</div><h4>We render it</h4><p>Within 24–48h you get a photorealistic preview of that exact space, renovated — ready to drop into your proposal or text to the client.</p></div>
+      <div class="step"><div class="n">3</div><h4>You win the bid</h4><p>Clients commit faster when they can see it. One extra closed job pays for a year of renders.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <h2>Simple per-render pricing</h2>
+    <p class="lead">No subscription, no software to learn. Pay per render, only when you need one.</p>
+    <div class="price">
+      <div class="tier">
+        <div class="amt">$99<small> / render</small></div>
+        <div style="color:var(--mut);font-weight:600">Single Render</div>
+        <ul>
+          <li>One room or exterior</li>
+          <li>One design direction</li>
+          <li>High-resolution image</li>
+          <li>24–48h turnaround</li>
+          <li>One free revision</li>
+        </ul>
+        <a class="cta" href="#start" style="display:block">Start with a free sample</a>
+      </div>
+      <div class="tier best">
+        <div class="badge">2 DESIGN OPTIONS</div>
+        <div class="amt">$149<small> / render</small></div>
+        <div style="color:var(--mut);font-weight:600">Bid-Winner</div>
+        <ul>
+          <li>Everything in Single</li>
+          <li><b>Two</b> design directions to choose from</li>
+          <li>Priority 24h turnaround</li>
+          <li>Two free revisions</li>
+          <li>Web + print-ready files</li>
+        </ul>
+        <a class="cta" href="#start" style="display:block">Start with a free sample</a>
+      </div>
+    </div>
+    <div class="guarantee">💯 <b>14-day money-back guarantee.</b> If the finished preview isn't something you'd proudly put in front of a client, reply to your delivery email within 14 days and we refund you in full — no forms, no back-and-forth.</div>
+  </div>
+</section>
+
+<section id="start" style="background:#fff;border-top:1px solid var(--line)">
+  <div class="wrap" style="text-align:center">
+    <h2>Get your free sample render</h2>
+    <p class="lead">Reply to our email (or email us) with <b>one photo</b> of a real project and the style you're pitching. We'll send back a free preview of that space — no card, no commitment. Like it? Your next renders are $99.</p>
+    <a class="cta" href="mailto:nexus.network.ai@gmail.com?subject=RenoShot%20free%20sample%20render&body=Hi%20Orion%2C%20here%27s%20a%20photo%20of%20my%20project.%20The%20look%20I%27m%20pitching%3A%20">Email a photo for a free render →</a>
+    <p class="trust" style="margin-top:16px">Turnaround 24–48h · You own the rendered image · We only ever use the photo you send us</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Straight answers</h2>
+    <div class="faq">
+      <div class="q"><b>Is this AI?</b><p>Yes — openly. RenoShot uses image AI to renovate the exact photo you send. That's why it's fast and affordable instead of a $500+ 3D rendering job.</p></div>
+      <div class="q"><b>Is it accurate enough to show a client?</b><p>It's a photorealistic <i>concept preview</i> to sell the vision — not an architectural or construction drawing. It keeps your room's real layout so clients recognise their own space.</p></div>
+      <div class="q"><b>Whose photos can I send?</b><p>Only photos you have the right to use — your own project photos. We never scrape or reuse anyone's images, and we never resell yours.</p></div>
+      <div class="q"><b>What if I don't like it?</b><p>You get free revisions, and a full money-back guarantee. If it's not client-ready, you don't pay.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="legal" style="background:#fff;border-top:1px solid var(--line)">
+  <div class="wrap faq">
+    <h2 style="font-size:24px">Terms, refunds &amp; privacy</h2>
+    <div class="q"><b>Refund policy</b><p>Every paid render is covered by a 14-day money-back guarantee. If you're not satisfied with the delivered preview, reply to your delivery email within 14 days of receiving it and we issue a full refund to your original payment method. Free samples cost nothing and carry no obligation.</p></div>
+    <div class="q"><b>How we use your photos (privacy)</b><p>We use the photo you send only to produce your render, and we delete source photos on request. We never resell, publish, or reuse your images, and we never share your email with third parties. Payments are processed securely by Stripe; we never see or store your card details.</p></div>
+    <div class="q"><b>AI disclosure</b><p>RenoShot is an automated AI service operated by "Orion". Every preview is generated by image-AI from the photo you provide. Renders are photorealistic <i>concept previews</i> for sales and visualization — they are not architectural plans, construction documents, or a guarantee of as-built results.</p></div>
+    <div class="q"><b>Contact &amp; provider</b><p>Service provider details are available on request. Email us any time at <a href="mailto:nexus.network.ai@gmail.com">nexus.network.ai@gmail.com</a> — we reply within 24 hours.</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>RenoShot</b> — AI renovation previews for contractors. An automated service operated by Orion.<br/>
+    AI-generated concept imagery for sales/visualization purposes; not construction documents.<br/>
+    <span id="contact">Contact: <a href="mailto:nexus.network.ai@gmail.com" style="color:var(--mut)">nexus.network.ai@gmail.com</a></span> · <a href="#legal" style="color:var(--mut)">Terms, refunds &amp; privacy</a>
+  </div>
+</footer>
+
+</body>
+</html>
